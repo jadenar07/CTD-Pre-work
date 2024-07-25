@@ -3,15 +3,59 @@
   <head>
     <title>Jaden's Marvel Gallery</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
+  <body class="wrap">
+    <div class="topnav">
+      <a class="active" href="#home">Home</a>
+      <a href="#news">Comics</a>
+      <a href="#contact">Characters</a>
+    </div>
+    <div class="container">
+      <div class="comic-carousel">
+        <div class="comic-carousel-slide">
+          <img src="assets/1.jpg" alt="Comic 1" />
+          <img src="assets/2.jpg" alt="Comic 2" />
+          <img src="assets/3.jpg" alt="Comic 3" />
+          <img src="assets/4.jpg" alt="Comic 4" />
+          <img src="assets/5.jpg" alt="Comic 5" />
+          <img src="assets/6.jpg" alt="Comic 6" />
+          <img src="assets/7.jpg" alt="Comic 7" />
+          <img src="assets/9.jpg" alt="Comic 9" />
+          <img src="assets/10.jpg" alt="Comic 10" />
+        </div>
+      </div>
+      <div class="comic-carousel">
+        <div class="comic-carousel-slide">
+          <img src="assets/5.jpg" alt="Comic 5" />
+          <img src="assets/1.jpg" alt="Comic 1" />
+          <img src="assets/9.jpg" alt="Comic 9" />
+          <img src="assets/3.jpg" alt="Comic 3" />
+          <img src="assets/7.jpg" alt="Comic 7" />
+          <img src="assets/4.jpg" alt="Comic 4" />
+          <img src="assets/2.jpg" alt="Comic 2" />
+          <img src="assets/10.jpg" alt="Comic 10" />
+          <img src="assets/6.jpg" alt="Comic 6" />
+        </div>
+      </div>
+    </div>
+    <h2 class="below-image">Find the best comics here</h2>
     <div class="app">
-      <h1>Marvel Gallery</h1>
       <div class="wrapper">
         <div id="comic-card"></div>
-        <button id="next-btn">Next</button>
       </div>
     </div>
     <script src="script.js"></script>
+    <script>
+      var copy = document
+        .querySelector(".comic-carousel-slide")
+        .cloneNode(true);
+      document.querySelector("comic-carousel").appendChild(copy);
+    </script>
   </body>
 </html>
