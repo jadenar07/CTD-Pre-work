@@ -1,16 +1,20 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "../Pages/Home/Home";
-
+import StarWarsPage from "../Pages/ComicPage/StarWarsPage";
+import PlanetsPage from "../Pages/CharactersPage/PlanetsPage";
+import NavBar from "./components/NavBar/NavBar";
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <Home></Home>
-    </>
+    <Router>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/films" element={<StarWarsPage />} />
+        <Route path="/planets" element={<PlanetsPage />} />
+      </Routes>
+    </Router>
   );
 }
 
