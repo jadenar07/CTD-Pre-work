@@ -1,7 +1,9 @@
 # CTD-Pre-work
 
 cd comic-site
+
 npm install
-npm install md5
+
+npm install react-router-dom
 
 npm run dev
