@@ -13,7 +13,7 @@ const PlanetsPage = () => {
       try {
         const response = await fetch(url);
         if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
+          throw new Error(`HTTP error, Status: ${response.status}`);
         }
         const data = await response.json();
         console.log("Fetched data:", data);
@@ -30,13 +30,13 @@ const PlanetsPage = () => {
               ) {
                 return planetData.result.properties;
               } else {
-                throw new Error("Invalid planet data structure");
+                throw new Error("Invalid planet structure");
               }
             })
           );
           setPlanets(planetsData);
         } else {
-          throw new Error("Invalid data structure");
+          throw new Error("Invalid structure");
         }
       } catch (error) {
         setError(error.message);

@@ -1,9 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import "./App.css";
 import Home from "../Pages/Home/Home";
-import StarWarsPage from "../Pages/ComicPage/StarWarsPage";
-import PlanetsPage from "../Pages/CharactersPage/PlanetsPage";
+import StarWarsPage from "../Pages/FilmsPage/StarWarsPage";
+import PlanetsPage from "../Pages/PlanetsPage/PlanetsPage";
 import NavBar from "./components/NavBar/NavBar";
 function App() {
   return (

@@ -13,13 +13,13 @@ const StarWarsPage = () => {
       try {
         const response = await fetch(url);
         if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
+          throw new Error(`HTTP error, status: ${response.status}`);
         }
         const data = await response.json();
         if (data && data.result) {
           setFilms(data.result);
         } else {
-          throw new Error("Invalid data structure");
+          throw new Error("Invalid");
         }
       } catch (error) {
         setError(error.message);
